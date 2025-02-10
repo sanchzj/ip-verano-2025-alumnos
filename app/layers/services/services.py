@@ -32,8 +32,8 @@ def filterByCharacter(name):
     filtered_cards = []
 
     for card in getAllImages():
-        # debe verificar si el name está contenido en el nombre de la card, antes de agregarlo al listado de filtered_cards.
-        filtered_cards.append(card)
+        if name.lower() in card.lower():
+            filtered_cards.append(card)
 
     return filtered_cards
 
@@ -42,8 +42,8 @@ def filterByHouse(house_name):
     filtered_cards = []
 
     for card in getAllImages():
-        # debe verificar si la casa de la card coincide con la recibida por parámetro. Si es así, se añade al listado de filtered_cards.
-        filtered_cards.append(card)
+        if house_name.lower() in card.lower():
+            filtered_cards.append(card)
 
     return filtered_cards
 
