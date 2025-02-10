@@ -32,7 +32,7 @@ def filterByCharacter(name):
     filtered_cards = []
 
     for card in getAllImages():
-        if name.lower() in card.lower():
+        if name.lower() in card.name.lower():
             filtered_cards.append(card)
 
     return filtered_cards
@@ -42,7 +42,7 @@ def filterByHouse(house_name):
     filtered_cards = []
 
     for card in getAllImages():
-        if house_name.lower() in card.lower():
+        if house_name.lower() in card.house.lower():
             filtered_cards.append(card)
 
     return filtered_cards
